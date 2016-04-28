@@ -46,17 +46,10 @@
     <div>
         <p>
             <?php
-
+            
             echo(session_id());
             echo('<br>');
-
-            session_start();
-            if (!isset($_SESSION['count'])) {
-                $_SESSION['count'] = 0;
-            } else {
-                $_SESSION['count']++;
-            }
-            echo($_SESSION['count']);
+            echo($_SESSION['info']);
 
             $sql = "SELECT id, registracija, ime FROM automobili";
             $result = $conn->query($sql);
